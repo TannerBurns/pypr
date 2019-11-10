@@ -1,7 +1,11 @@
 # Pyper
 
 <!--Badges-->
+![MIT badge](https://img.shields.io/badge/license-MIT-black)
+![Version badge](https://img.shields.io/github/manifest-json/v/tannerburns/pyper?color=red)
+![RepoSize badge](https://img.shields.io/github/repo-size/tannerburns/pyper?color=green)
 ![Python badge](https://img.shields.io/badge/python-setuptools-blue?logo=python&logoColor=yellow)
+![Platform badge](https://img.shields.io/badge/platform-linux%20%7C%20osx%20%7C%20win32-yellow)
 
   An easy cli tool to create new python projects with a README.md, setup.py and manifest.json
 
