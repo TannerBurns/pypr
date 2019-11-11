@@ -19,48 +19,47 @@ Quick start
 Examples
 =====
 
-```bash
-$pyper --help
-Usage: pyper [OPTIONS] COMMAND [ARGS]...
+    $pyper --help
+    Usage: pyper [OPTIONS] COMMAND [ARGS]...
 
-  Pyper Setup CLI
+      Pyper Setup CLI
 
-Options:
-  --help  Show this message and exit.
+    Options:
+      --help  Show this message and exit.
 
-Commands:
-  build
-```
+    Commands:
+      build
 
-```bash
-$pyper build --help
-Usage: pyper build [OPTIONS]
 
-Options:
-  -p, --project TEXT              Name of directory to be created for project
-                                  [required]
-  -n, --name TEXT                 Name to use for setuptools, if blank project
-                                  name is used
-  -v, --version TEXT              [default: 0.0.1]
-  -d, --description TEXT
-  -a, --author TEXT
-  -ae, --author_email TEXT
-  -u, --url TEXT
-  -r, --requirements TEXT
-  -c, --classifiers TEXT
-  -pd, --package_data TEXT
-  -pe, --package_exclude TEXT
-  -ipd, --include_package_data BOOLEAN
-  -eph, --entry_point_header TEXT
-                                  entry_point header
-  -epc, --entry_point_command TEXT
-                                  entry_point command
-  -s, --scripts TEXT
-  -k, --keywords TEXT
-  --help                          Show this message and exit.
+    $pyper build --help
+    Usage: pyper build [OPTIONS]
 
-```
+      build a new project
 
-```bash
-$pyper build --project pyper --version 0.0.1 --author "Tanner Burns" --author_email tjburns102@gmail.com --requirements click --entry_point_header console_scripts --entry_point_command "pyper=pyper:cli" --package_data "templates/*" --package_data "templates/baseproject/*" 
-```
+    Options:
+      -p, --project TEXT              Name of directory to be created for project
+                                      [required]
+      -n, --name TEXT                 Name to use for setuptools, if blank project
+                                      name is used
+      -v, --version TEXT              Version to set for project  [default: 0.0.1]
+      -d, --description TEXT          Description for project
+      -a, --author TEXT               Author of project
+      -ae, --author_email TEXT        Author's email for project
+      -u, --url TEXT                  URL for the project
+      -r, --requirements TEXT         Requirements for pip related to project
+      -c, --classifiers TEXT          Classifier strings for project
+      -pd, --package_data TEXT        Package data to include in project directory
+      -pi, --package_include TEXT     Packages to include during install
+      -pe, --package_exclude TEXT     Packages to exclude during install
+      -ipd, --include_package_data BOOLEAN
+                                      Flag for including package data
+      -eph, --entry_point_header TEXT
+                                      entry_point header
+      -epc, --entry_point_command TEXT
+                                      entry_point command
+      -s, --scripts TEXT              Scripts to include for project
+      -k, --keywords TEXT             Keywords to describe project
+      --help                          Show this message and exit.
+
+
+    $pyper build new --project pyper_cli --version 0.0.1 --author "Tanner Burns" --author_email tjburns102@gmail.com --requirements click --entry_point_header console_scripts --entry_point_command "pyper=pyper:cli" --package_data "templates/*" --package_data "templates/baseproject/*" --package_include pyper --package_include pyper/* --include_package_data 

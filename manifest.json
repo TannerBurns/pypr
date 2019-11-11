@@ -1,22 +1,27 @@
 {
     "name": "pyper",
-    "version": "0.0.5",
-    "description": "An easy cli tool to create new python projects with a README.md, setup.py and manifest.json",
-    "url": "Tanner Burns",
-    "author": "tjburns102@gmail.com",
-    "author_email": null,
+    "version": "0.0.8",
+    "description": null,
+    "author": "Tanner Burns",
+    "author_email": "tjburns102@gmail.com",
+    "url": null,
     "requirements": [
-        "click"
+        "click",
+        "colored"
     ],
     "classifiers": [],
     "package_data": {
         "": [
-            "templates/*",
-            "templates/baseproject/*"
+            "build/templates/*",
+            "build/templates/baseproject/*"
         ]
     },
+    "package_include": [
+        "pyper",
+        "pyper.*"
+    ],
     "package_exclude": [],
-    "include_package_data": null,
+    "include_package_data": true,
     "entry_points": {
         "console_scripts": [
             "pyper=pyper:cli"

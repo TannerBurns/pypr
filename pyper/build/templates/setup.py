@@ -9,10 +9,14 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as fin:
 with open(os.path.join(os.path.dirname(__file__), 'manifest.json')) as fin:
     manifest = json.load(fin)
 
+
 setup(
     name = manifest.get('name', 'default.manifest.name'),
     version =  manifest.get('version', '0.0.0'),
-    packages = find_packages(exclude=manifest.get('package_exclude', [])),
+    packages = find_packages(
+        include=manifest.get('package_include', []), 
+        exclude=manifest.get('package_exclude', [])
+    ),
     package_data = manifest.get('package_data', None),
     include_package_data = manifest.get('include_package_data', True),
     description =  manifest.get('description', 'default.manifest.description'),
