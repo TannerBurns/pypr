@@ -7,11 +7,8 @@ from typing import List
 
 from .utils import PyperSetup
 
-@click.group()
-def build_group():
-    pass
 
-@build_group.command(name='new')
+@click.command(name='build')
 @click.option('--project', '-p', type=str, required=True, 
     help='Name of directory to be created for project')
 @click.option('--name', '-n', type=str, 

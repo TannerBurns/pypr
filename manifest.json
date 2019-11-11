@@ -1,10 +1,10 @@
 {
     "name": "pyper",
-    "version": "0.0.8",
-    "description": null,
+    "version": "0.0.9",
+    "description": "An easy cli tool to create new python projects with a README.md, setup.py and manifest.json",
     "author": "Tanner Burns",
     "author_email": "tjburns102@gmail.com",
-    "url": null,
+    "url": "https://github.com/TannerBurns/pyper",
     "requirements": [
         "click",
         "colored"

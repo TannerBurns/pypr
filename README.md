@@ -13,12 +13,13 @@
 Quick start
 =====
 
-  (virtualenv is recommended)
+  *virtualenv is recommended*
+
   pip3 install .
 
 Examples
 =====
-
+```
     $pyper --help
     Usage: pyper [OPTIONS] COMMAND [ARGS]...
 
@@ -28,9 +29,10 @@ Examples
       --help  Show this message and exit.
 
     Commands:
-      build
-
-
+      build    build a new project
+      project  Inspect and modify Pyper project structures
+```
+```
     $pyper build --help
     Usage: pyper build [OPTIONS]
 
@@ -60,6 +62,23 @@ Examples
       -s, --scripts TEXT              Scripts to include for project
       -k, --keywords TEXT             Keywords to describe project
       --help                          Show this message and exit.
+```
+```
+    $pyper project --help
+    Usage: pyper project [OPTIONS] COMMAND [ARGS]...
 
+      Inspect and modify Pyper project structures
 
+    Options:
+      --help  Show this message and exit.
+
+    Commands:
+      metadata  Get and set attributes of Pyper project metadata
+      version   Get, set, and increment/decrement version for pyper project
+```
+
+Example building new project
+=====
+```
     $pyper build new --project pyper_cli --version 0.0.1 --author "Tanner Burns" --author_email tjburns102@gmail.com --requirements click --entry_point_header console_scripts --entry_point_command "pyper=pyper:cli" --package_data "templates/*" --package_data "templates/baseproject/*" --package_include pyper --package_include pyper/* --include_package_data 
+```
