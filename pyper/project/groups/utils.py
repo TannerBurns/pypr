@@ -79,6 +79,41 @@ class PyperMetadata(PyperManifest):
         self.manifest['url'] = url
     
 
+class PyperRequirements(PyperManifest):
 
+    def __init__(self):
+        super().__init__()
     
+    def get_requirements(self):
+        return self.manifest.get('requirements', [])
+    
+    def add_requirement(self, requirement):
+        self.manifest['requirements'].append(requirement)
+    
+    def remove_requirement(self, requirement):
+        self.manifest['requirements'].remove(requirement)
+    
+
+class PyperPackages(PyperManifest):
+
+    def __init__(self):
+        super().__init__()
+    
+    def get_included_packages(self):
+        return self.manifest.get('package_include', [])
+    
+    def get_excluded_packages(self):
+        return self.manifest.get('package_exclude', [])
+    
+    def add_included_packages(self, package):
+        self.manifest['package_include'].append(package)
+    
+    def remove_included_packages(self, package):
+        self.manifest['package_include'].remove(package)
+    
+    def add_excluded_packages(self, package):
+        self.manifest['package_exclude'].append(package)
+    
+    def remove_excluded_packages(self, package):
+        self.manifest['package_exclude'].remove(package)
 

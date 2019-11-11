@@ -1,6 +1,6 @@
 import click
 
-from ...utils import PyperMetadata
+from ..utils import PyperMetadata
 
 @click.group()
 def project_metadata_group():

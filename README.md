@@ -73,8 +73,10 @@ Examples
       --help  Show this message and exit.
 
     Commands:
-      metadata  Get and set attributes of Pyper project metadata
-      version   Get, set, and increment/decrement version for pyper project
+      metadata      Get and set attributes of Pyper project metadata
+      packages      Get, add or remove included and excluded packages in pyper...
+      requirements  Get, add, or remove pip requirements from current pyper...
+      version       Get, set, and increment/decrement version for pyper project
 ```
 
 Example building new project

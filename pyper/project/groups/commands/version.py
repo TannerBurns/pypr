@@ -2,7 +2,7 @@ import click
 
 from colored import fg
 
-from ...utils import PyperVersion
+from ..utils import PyperVersion
 
 @click.command(name='version')
 @click.option('--get', '-g', is_flag=True,
