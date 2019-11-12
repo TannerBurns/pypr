@@ -7,7 +7,7 @@ from .commands.packages import packages_group
 
 @click.group()
 def project_group():
-    '''Inspect and modify Pyper project structures'''
+    '''Inspect and modify Pypr project structures'''
     pass
 
 

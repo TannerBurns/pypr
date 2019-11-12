@@ -1,10 +1,10 @@
 {
-    "name": "pyper",
+    "name": "pypr",
     "version": "0.0.10",
     "description": "An easy cli tool to create new python projects with a README.md, setup.py and manifest.json",
     "author": "Tanner Burns",
     "author_email": "tjburns102@gmail.com",
-    "url": "https://github.com/TannerBurns/pyper",
+    "url": "https://github.com/TannerBurns/pypr",
     "requirements": [
         "click",
         "colored"
@@ -17,14 +17,14 @@
         ]
     },
     "package_include": [
-        "pyper",
-        "pyper.*"
+        "pypr",
+        "pypr.*"
     ],
     "package_exclude": [],
     "include_package_data": true,
     "entry_points": {
         "console_scripts": [
-            "pyper=pyper:cli"
+            "pypr=pypr:cli"
         ]
     },
     "scripts": [],

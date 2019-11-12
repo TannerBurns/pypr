@@ -1,6 +1,6 @@
 from typing import NamedTuple, List
 
-class PyperSetup(NamedTuple):
+class PyprSetup(NamedTuple):
     """NamedTuple for building struct around setuptools setup call
     """
     name: str

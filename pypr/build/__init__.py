@@ -5,7 +5,7 @@ import json
 from shutil import copy, copytree
 from typing import List
 
-from .utils import PyperSetup
+from .utils import PyprSetup
 
 
 @click.command(name='build')
@@ -57,7 +57,7 @@ def build(
     copy(f'{templates_dir}/setup.py', f'{project_dir}/setup.py')
     copy(f'{templates_dir}/README.md', f'{project_dir}/README.md')
     copytree(f'{templates_dir}/baseproject', f'{project_dir}/{name}')
-    pyper_setup = PyperSetup(
+    pypr_setup = PyprSetup(
         name,
         version,
         description,
@@ -75,4 +75,4 @@ def build(
         list(keywords)
     )
     with open(os.path.join(project_dir, 'manifest.json'), 'w') as fout:
-        fout.write(json.dumps(pyper_setup._asdict(), indent= 4))
+        fout.write(json.dumps(pypr_setup._asdict(), indent= 4))
