@@ -1,7 +1,7 @@
 import json
 import os
 
-class PyperManifest(object):
+class PyprManifest(object):
     def __init__(self):
         self.manifest_path = './manifest.json'
         if not os.path.exists(self.manifest_path):
@@ -12,7 +12,7 @@ class PyperManifest(object):
         open(self.manifest_path, 'w').write(json.dumps(self.manifest, indent=4))
 
 
-class PyperVersion(PyperManifest):
+class PyprVersion(PyprManifest):
 
     def __init__(self):
         super().__init__()
@@ -49,7 +49,7 @@ class PyperVersion(PyperManifest):
         self.manifest['version'] = self.get_version()
     
     
-class PyperMetadata(PyperManifest):
+class PyprMetadata(PyprManifest):
 
     def __init__(self):
         super().__init__()
@@ -79,7 +79,7 @@ class PyperMetadata(PyperManifest):
         self.manifest['url'] = url
     
 
-class PyperRequirements(PyperManifest):
+class PyprRequirements(PyprManifest):
 
     def __init__(self):
         super().__init__()
@@ -94,7 +94,7 @@ class PyperRequirements(PyperManifest):
         self.manifest['requirements'].remove(requirement)
     
 
-class PyperPackages(PyperManifest):
+class PyprPackages(PyprManifest):
 
     def __init__(self):
         super().__init__()

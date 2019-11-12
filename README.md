@@ -1,9 +1,9 @@
-# Pyper
+# Pypr
 
 <!--Badges-->
 ![MIT badge](https://img.shields.io/badge/license-MIT-black)
-![Version badge](https://img.shields.io/github/manifest-json/v/tannerburns/pyper?color=red)
-![RepoSize badge](https://img.shields.io/github/repo-size/tannerburns/pyper?color=green)
+![Version badge](https://img.shields.io/github/manifest-json/v/tannerburns/pypr?color=red)
+![RepoSize badge](https://img.shields.io/github/repo-size/tannerburns/pypr?color=green)
 ![Python badge](https://img.shields.io/badge/python-setuptools-blue?logo=python&logoColor=yellow)
 ![Platform badge](https://img.shields.io/badge/platform-linux%20%7C%20osx%20%7C%20win32-yellow)
 
@@ -20,21 +20,21 @@ Quick start
 Examples
 =====
 ```
-    $pyper --help
-    Usage: pyper [OPTIONS] COMMAND [ARGS]...
+    $pypr --help
+    Usage: pypr [OPTIONS] COMMAND [ARGS]...
 
-      Pyper Setup CLI
+      Pypr Setup CLI
 
     Options:
       --help  Show this message and exit.
 
     Commands:
       build    build a new project
-      project  Inspect and modify Pyper project structures
+      project  Inspect and modify Pypr project structures
 ```
 ```
-    $pyper build --help
-    Usage: pyper build [OPTIONS]
+    $pypr build --help
+    Usage: pypr build [OPTIONS]
 
       build a new project
 
@@ -64,23 +64,23 @@ Examples
       --help                          Show this message and exit.
 ```
 ```
-    $pyper project --help
-    Usage: pyper project [OPTIONS] COMMAND [ARGS]...
+    $pypr project --help
+    Usage: pypr project [OPTIONS] COMMAND [ARGS]...
 
-      Inspect and modify Pyper project structures
+      Inspect and modify Pypr project structures
 
     Options:
       --help  Show this message and exit.
 
     Commands:
-      metadata      Get and set attributes of Pyper project metadata
-      packages      Get, add or remove included and excluded packages in pyper...
-      requirements  Get, add, or remove pip requirements from current pyper...
-      version       Get, set, and increment/decrement version for pyper project
+      metadata      Get and set attributes of Pypr project metadata
+      packages      Get, add or remove included and excluded packages in pypr...
+      requirements  Get, add, or remove pip requirements from current pypr...
+      version       Get, set, and increment/decrement version for pypr project
 ```
 
 Example building new project
 =====
 ```
-    $pyper build new --project pyper_cli --version 0.0.1 --author "Tanner Burns" --author_email tjburns102@gmail.com --requirements click --entry_point_header console_scripts --entry_point_command "pyper=pyper:cli" --package_data "templates/*" --package_data "templates/baseproject/*" --package_include pyper --package_include pyper/* --include_package_data 
+    $pypr build new --project pypr_cli --version 0.0.1 --author "Tanner Burns" --author_email tjburns102@gmail.com --requirements click --entry_point_header console_scripts --entry_point_command "pypr=pypr:cli" --package_data "templates/*" --package_data "templates/baseproject/*" --package_include pypr --package_include pypr/* --include_package_data 
 ```

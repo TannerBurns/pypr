@@ -6,7 +6,7 @@ from .project.groups import project_group
 
 @click.group()
 def cli():
-    '''Pyper Setup CLI'''
+    '''Pypr Setup CLI'''
     pass
 
 cli.add_command(build, name='build')
