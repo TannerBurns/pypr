@@ -1,6 +1,6 @@
 {
     "name": "pypr",
-    "version": "0.0.10",
+    "version": "0.1.2",
     "description": "An easy cli tool to create new python projects with a README.md, setup.py and manifest.json",
     "author": "Tanner Burns",
     "author_email": "tjburns102@gmail.com",
