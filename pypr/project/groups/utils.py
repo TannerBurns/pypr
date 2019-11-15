@@ -37,14 +37,24 @@ class PyprVersion(PyprManifest):
         return f'{self.manifest.get("name")} version: {self.major}.{self.minor}.{self.patch}'
     
     def increment_patch(self, increaseBy: int):
-        self.patch += increaseBy
+        vals = str(float(int(increaseBy + self.patch))/10).split('.')
+        minor = int(vals[0])
+        patch = int(vals[1])
+        if minor > 0:
+            self.increment_minor(minor)
+        self.patch = patch
         self.manifest['version'] = self.get_version()
     
     def increment_minor(self, increaseBy: int):
-        self.minor += increaseBy
+        vals = str(float(int(increaseBy + self.minor))/10).split('.')
+        major = int(vals[0])
+        minor = int(vals[1])
+        if major > 0:
+            self.increment_major(major)
+        self.minor = minor
         self.manifest['version'] = self.get_version()
     
-    def increase_major(self, increaseBy: int):
+    def increment_major(self, increaseBy: int):
         self.major += increaseBy
         self.manifest['version'] = self.get_version()
     
